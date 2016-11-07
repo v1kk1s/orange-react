@@ -4,16 +4,20 @@
   "description": "React version of Orange app by Vika Baheryan",
   "main": "webpack.config.js",
   "dependencies": {
-    "webpack": "^1.13.3"
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
     "babel-preset-react": "^6.16.0",
-    "html-webpack-plugin": "^2.24.1"
+    "html-webpack-plugin": "^2.24.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "production": "webpack -p",
+    "start": "webpack-dev-server"
   },
   "author": "Vika Baheryan"
 }
