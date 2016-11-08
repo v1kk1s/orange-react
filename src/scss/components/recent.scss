@@ -64,7 +64,7 @@
 
     &-icon {
       @include size(64px 65px);
-      background: url("../public/img/delete-contact-icon.png") no-repeat;
+      background: url("/public/img/delete-contact-icon.png") no-repeat;
       background-position: center center;
     }
 
