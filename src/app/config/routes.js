@@ -12,7 +12,7 @@ var Recent = require('../components/Recent');
 var routes = (
   <Router history={hashHistory}>
     <Route path='/' component={Layout}>
-      <Route path='/login' component={Login} />
+      <IndexRoute component={Login} /> //make login active if other routes are not specified
       <Route path='/recent' component={Recent} />
     </Route>
   </Router>
