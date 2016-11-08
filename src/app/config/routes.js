@@ -6,7 +6,7 @@ var IndexRoute = ReactRouter.IndexRoute;
 var hashHistory = ReactRouter.hashHistory;
 
 var Layout = require('../components/Layout');
-var Login = require('../components/Login');
+var Login = require('../containers/LoginContainer');
 var Recent = require('../components/Recent');
 
 var routes = (
