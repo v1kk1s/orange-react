@@ -1,0 +1,66 @@
+@import "bourbon";
+@import "../variables.scss";
+@import "../sprite";
+
+.groups {
+  padding: 140px 5% 0;
+
+  &-item {
+    @include size(100% 220px);
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    @include align-items(center);
+  }
+
+  &-img {
+    position: relative;
+    border-radius: 50%;
+    background-color:  #cdcdcd;
+    @include size(190px);
+
+    &.default:after {
+      content: '';
+      display: block;
+      margin: auto;
+      @include sprite($group-default);
+      @include position(absolute, 0 0 0 0);
+    }
+  }
+
+  &-name {
+    margin-left: 20px;
+    color: $dark;
+    font-size: 40px;
+    word-spacing: 6.4px;
+    text-transform: capitalize;
+  }
+
+  &-counter {
+    border-radius: 50%;
+    background-color:  #f15a24;
+    color:  #ffffff;
+    font-size: 29px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 40px;
+    @include size(40px);
+    @include position(absolute, 10px 10px null null);
+  }
+
+  &-add-new {
+    margin: 40px auto 20px;
+    line-height: 80px;
+    border-radius: 5px;
+    font-size: 30px;
+    color: white;
+    background: $orange;
+    text-align: center;
+    @include size(400px 80px);
+
+    &:hover, &:active {
+      background: shade($orange, 20%);
+    }
+  }
+
+}

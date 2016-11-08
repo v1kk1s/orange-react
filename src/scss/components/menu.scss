@@ -1,0 +1,115 @@
+@import "bourbon";
+@import "../variables.scss";
+@import "../sprite";
+
+.menu {
+  width: 530px;
+  height: 100%;
+  background-color: $orange;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  color: white;
+  @include transform(translateX(-530px));
+  -webkit-transition:transform 0.3s $ease-in-out-quad;
+  -moz-transition:transform 0.3s $ease-in-out-quad;
+  -ms-transition:transform 0.3s $ease-in-out-quad;
+  -o-transition:transform 0.3s $ease-in-out-quad;
+  transition:transform 0.3s $ease-in-out-quad;
+
+  &-avatar-wrap {
+    width: 100%;
+    height: 380px;
+    background: url("../public/img/menu-bg.jpg") no-repeat;
+    background-size: cover;
+
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(space-around);
+    @include align-items(center);
+  }
+  
+  &-avatar {
+    position: relative;
+    @include size(220px);
+    border-radius: 50%;
+    background: url("../public/img/menu-avatar.png") no-repeat;
+    background-size: cover;
+    &-before {
+      content: '';
+      display: block;
+      @include size(220px);
+      border-radius: 50%;
+      background-color: white;
+      @include position(absolute, -5px null null -5px);
+    }
+  }
+
+  &-name {
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: -1px;
+    font-family: $h-bold;
+  }
+
+  &-list-item {
+    position: relative;
+    margin-bottom: 49px;
+    line-height: 55px;
+    letter-spacing: -1px;
+    list-style: none;
+    span {
+      display: block;
+      padding-left: 31%;
+      color: white;
+      font-size: 36px;
+      vertical-align: baseline;
+      &:before {
+        content: '';
+        display: block;
+        @include position(absolute, 0 null null 0);
+      }
+    }
+  }
+
+  &-logout {
+    line-height: 55px;
+    letter-spacing: -1px;
+    padding-left: 31%;
+    color: white;
+    font-size: 36px;
+    @include position(absolute, null null 110px 27px);
+  }
+
+  &-recent:before {
+    @include sprite($recent);
+  }
+
+  &-groups:before {
+      @include sprite($groups);
+  }
+
+  &-contacts:before {
+      @include sprite($contacts);
+  }
+
+  &-settings:before {
+      @include sprite($settings);
+  }
+
+  &-logout:before {
+    content: '';
+    display: block;
+    @include position(absolute, 0 null null 56px);
+    @include sprite($log-out);
+  }
+
+  &-list-wrap {
+    padding: 33px 15%;
+  }
+
+  &-open {
+    @include transform(translateX(0));
+  }
+}

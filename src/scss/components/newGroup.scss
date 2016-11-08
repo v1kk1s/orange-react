@@ -1,0 +1,178 @@
+@import "bourbon";
+@import "../variables.scss";
+@import "../sprite";
+
+.new-group {
+
+  &-create {
+    padding: 15px 0 0 39px;
+    margin-bottom: 50px;
+  }
+
+  &-info-wrap {
+    margin-left: 20px;
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
+
+  &-img {
+    border-radius: 50%;
+    overflow: hidden;
+    @include size(126px);
+    @include sprite($new-group);
+  }
+
+  &-input {
+    padding-bottom: 3px;
+    color: $gray6;
+    width: 78.5%;
+    font-size: 32px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid $gray2;
+    letter-spacing: 0.5px;
+    @include placeholder {
+      color: $gray2;
+    }
+  }
+
+  &-set-photo {
+    color: $orange;
+    font-size: 24px;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+    margin-bottom: 22px;
+
+  }
+
+  &-instructions {
+    margin-top: 24px;
+  }
+
+  &-add-people {
+    font-size: 22px;
+    color: $gray7;
+    letter-spacing: 0.6px;
+    margin-bottom: 25px;
+  }
+
+  &-counter {
+    color: $gray3;
+    margin-left: 5px;
+  }
+
+  &-members {
+    color: $dark;
+    font-size: 22px;
+    font-weight: 500;
+    word-spacing: 6.4px;
+    margin-bottom: 25px;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &-contacts-list {
+    padding-left: 42px;
+  }
+
+  &-contact {
+    position: relative;
+    height: 180px;
+    width: 100%;
+    @include transform(translateY(0));
+    @include transition(all 0.3s ease);
+  }
+
+  &-membership-indicator {
+    margin: auto;
+    border-radius: 50%;
+    background-color: white !important;
+    border: 1px solid $gray2 !important;
+    @include size(34px);
+    @include position(absolute, 0 null 0 null);
+  }
+
+  input[type='radio']:checked + .new-group-added {
+    display: block;
+  }
+
+  input[type='radio']:not(:checked) + .new-group-added {
+    display: none;
+  }
+
+  &-added {
+    margin: auto;
+    border-radius: 50%;
+    background-color: $green;
+    background-image: url('public/img/sprites/newGroupCheck.png');
+    background-position: 50%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    @include size(34px);
+    @include position(absolute, 0 null 0 null);
+  }
+
+  &-contact-info {
+    margin-left: 78px;
+    border-bottom: 1px solid $gray2;
+    @include size(null 100%);
+    @include display(flex);
+    @include flex-direction(row);
+    @include align-items(center);
+
+    &:before {
+      content: '';
+      display: block;
+      background-color: $gray4;
+      border: 1px solid white;
+      border-radius: 50%;
+      z-index: 1;
+      @include size(30px);
+      @include position(absolute, null null 40px 148px);
+    }
+
+    &.online:before {
+      background-color: $green;
+      border: 1px solid $green;
+    }
+  }
+
+  &-contact-img {
+    @include size(100px);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &-contact-name {
+    margin-left: 27px;
+    color: $dark;
+    font-size: 33px;
+    font-family: $h-bold;
+    letter-spacing: -0.8px;
+  }
+
+  &-submit {
+    line-height: 80px;
+    border-radius: 5px;
+    font-size: 30px;
+    color: white;
+    background: $orange;
+    text-align: center;
+    border: none;
+    @include size(250px 80px);
+
+    &:hover, &:active {
+      background: shade($orange, 20%);
+    }
+  }
+
+  &-contact-added {
+    opacity: 0.6;
+    @include filter(grayscale(80%));
+  }
+}

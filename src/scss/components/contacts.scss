@@ -1,0 +1,77 @@
+@import "bourbon";
+@import "../variables.scss";
+@import "../sprite";
+
+.contacts {
+  padding-left: 5%;
+  padding-right: 5%;
+  &-item {
+    position: relative;
+    border-bottom: 1px solid $gray;
+    @include align-items(center);
+    @include display(flex);
+    @include justify-content(space-between);
+    @include size(100% 180px);
+
+    &:before {
+      content: '';
+      display: block;
+      background-color: $gray4;
+      border: 1px solid white;
+      border-radius: 50%;
+      z-index: 1;
+      @include size(30px);
+      @include position(absolute, null null 40px 72px);
+    }
+  }
+
+  &-item-img {
+    position: relative;
+    border-radius: 50%;
+    @include size(100px);
+  }
+
+  &-online:before {
+    background-color: $green;
+  }
+
+  &-info {
+    position: relative;
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(flex-start);
+  }
+
+  &-name {
+    font-size: 33px;
+    color: $dark;
+    margin-left: 27px;
+    font-family: $h-medium;
+    letter-spacing: 2px;
+  }
+
+  &-friend {
+    @include sprite($friens-icon);
+  }
+
+  &-favourite {
+    @include sprite($favourite-icon);
+  }
+
+  &-group {
+    padding-top: 10px;
+    @include size(85px 100%);
+    @include display(flex);
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+  }
+
+  &-item-group {
+    font-size: 22px;
+    color: $gray5;
+    font-family: $h-medium;
+    text-transform: capitalize;
+    margin-top: 5px;
+  }
+}
