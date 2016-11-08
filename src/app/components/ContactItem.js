@@ -8,10 +8,43 @@ var ContactItemView = React.createClass({
     item: PropTypes.object.isRequired,
   },
 
+  getInitialState: function() {
+    return {
+      isDeleteBtnVisible: false,
+      isContactDeleted: false,
+    };
+  },
+
+  startSwipe: function(e) {
+    this.startX = e.touches[0].pageX;
+  },
+
+  endSwipe: function() {
+    this.startX > this.endX
+      ? this.setState({isDeleteBtnVisible: true})
+      : this.setState({isDeleteBtnVisible: false});
+  },
+
+  midSwipe: function(e) {
+    this.endX = e.touches[0].pageX;
+  },
+
+  deleteContact: function() {
+    this.setState({isContactDeleted: true})
+  },
+
   render: function() {
     let {item} = this.props;
+    let {isDeleteBtnVisible, isContactDeleted} = this.state;
+    let className = `recent-contact-entry-wrap
+     ${isDeleteBtnVisible ? 'delete' : ''}
+     ${isContactDeleted ? 'deleted' : ''}`;
+
     return(
-      <div className='recent-contact-entry-wrap' id={item.id}>
+      <div className={className}
+        onTouchStart={this.startSwipe}
+        onTouchMove={this.midSwipe}
+        onTouchEnd={this.endSwipe}>
         <div className='recent-contact'>
 
           <div className='recent-contact-logo'>
@@ -24,7 +57,7 @@ var ContactItemView = React.createClass({
           </div>
         </div>
 
-        <div className='recent-delete-contact'>
+        <div className='recent-delete-contact' onClick={this.deleteContact}>
           <div className='recent-delete-contact-icon'></div>
           <p className='recent-delete-contact-text'>Delete</p>
         </div>
