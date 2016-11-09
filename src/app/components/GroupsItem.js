@@ -10,11 +10,11 @@ var GroupItem = React.createClass({
   render: function() {
     let {group} = this.props;
     return(
-      <div className="groups-item">
-        <div className="groups-img default">
-          <div className="groups-counter">{group.members.length}</div>
+      <div className='groups-item'>
+        <div className='groups-img default'>
+          <div className='groups-counter'>{group.members.length}</div>
         </div>
-        <div className="groups-name">{group.name}</div>
+        <div className='groups-name'>{group.name}</div>
       </div>
     );
   }

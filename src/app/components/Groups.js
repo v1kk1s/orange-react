@@ -14,7 +14,7 @@ var Groups = React.createClass({
     return(
       <div>
         <Header title='Groups' />
-        <div className="groups list-page">
+        <div className='groups list-page'>
 
           {groups.map((group, i) => {
             return(
@@ -22,7 +22,7 @@ var Groups = React.createClass({
             );
           })}
 
-          <div className="groups-add-new">Add new group</div>
+          <div className='groups-add-new'>Add new group</div>
 
         </div>
       </div>

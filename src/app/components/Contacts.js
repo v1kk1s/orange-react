@@ -9,7 +9,7 @@ var ContactsView = React.createClass({
     return(
       <div>
         <Header title='Contacts' />
-        <div className="recent list-page">
+        <div className='recent list-page'>
           {Contacts.map((item, i) => {
             return(
               <ContactItem item={item} key={i}/>

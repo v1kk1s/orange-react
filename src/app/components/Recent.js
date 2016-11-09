@@ -14,7 +14,7 @@ var Recent = React.createClass({
     return(
       <div>
         <Header title='Recent' />
-        <div className="recent list-page">
+        <div className='recent list-page'>
           {contacts.map((item, i) => {
             return(
               <ContactItem item={item} key={i}/>

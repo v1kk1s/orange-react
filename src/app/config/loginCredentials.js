@@ -1,19 +1,19 @@
 var credentials = [
   {
-    username: "admin",
-    password: "admin"
+    username: 'admin',
+    password: 'admin'
   },
   {
-    username: "vika",
-    password: "vika"
+    username: 'vika',
+    password: 'vika'
   },
   {
-    username: "z",
-    password: "z"
+    username: 'z',
+    password: 'z'
   },
   {
-    username: "baheryan.vika@gmail.com",
-    password: "1234"
+    username: 'baheryan.vika@gmail.com',
+    password: '1234'
   }
 ];
 
