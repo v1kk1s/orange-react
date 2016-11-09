@@ -4,6 +4,10 @@ var ContactItemView = require('../components/ContactItem');
 
 var ContactItemContainer = React.createClass({
 
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  },
+
   propTypes: {
     item: PropTypes.object.isRequired,
   },
@@ -33,6 +37,10 @@ var ContactItemContainer = React.createClass({
     this.setState({isContactDeleted: true})
   },
 
+  goToConversation: function() {
+    this.context.router.push('/conversation', this.props.item.id);
+  },
+
   render: function() {
     let {item} = this.props;
     let {isDeleteBtnVisible, isContactDeleted} = this.state;
@@ -42,6 +50,7 @@ var ContactItemContainer = React.createClass({
 
     return(
       <ContactItemView
+        goToConversation={this.goToConversation}
         endSwipe={this.endSwipe}
         startSwipe={this.startSwipe}
         midSwipe={this.midSwipe}

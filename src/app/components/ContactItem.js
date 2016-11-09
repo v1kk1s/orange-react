@@ -11,12 +11,22 @@ var ContactItemView = React.createClass({
     midSwipe:PropTypes.func.isRequired,
     startSwipe:PropTypes.func.isRequired,
     endSwipe:PropTypes.func.isRequired,
+    goToConversation:PropTypes.func.isRequired,
   },
 
   render: function() {
-    let {item, className, deleteContact, midSwipe, startSwipe, endSwipe} = this.props;
+    let {
+      item,
+      className,
+      deleteContact,
+      midSwipe,
+      startSwipe,
+      endSwipe,
+      goToConversation
+      } = this.props;
     return(
       <div className={className}
+        onClick={goToConversation}
         onTouchStart={startSwipe}
         onTouchMove={midSwipe}
         onTouchEnd={endSwipe}>

@@ -8,12 +8,14 @@ var hashHistory = ReactRouter.hashHistory;
 var Layout = require('../components/Layout');
 var Login = require('../containers/LoginContainer');
 var Recent = require('../components/Recent');
+var Conversation = require('../containers/ConversationContainer');
 
 var routes = (
   <Router history={hashHistory}>
     <Route path='/' component={Layout}>
       <IndexRoute component={Login} /> //make login active if other routes are not specified
       <Route path='/recent' component={Recent} />
+      <Route path='/conversation' component={Conversation} />
     </Route>
   </Router>
 );
