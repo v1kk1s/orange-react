@@ -26,7 +26,7 @@ var Menu = React.createClass({
         <div className='menu-list-wrap'>
           <ul>
             <Link to={'/recent'} className='menu-list-item'><span className='menu-recent'>Recent</span></Link>
-            <Link className='menu-list-item'><span className='menu-groups'>Groups</span></Link>
+            <Link to={'/groups'} className='menu-list-item'><span className='menu-groups'>Groups</span></Link>
             <Link to={'/contacts'} className='menu-list-item'><span className='menu-contacts'>Contacts</span></Link>
             <Link className='menu-list-item'><span className='menu-settings'>Settings</span></Link>
           </ul>
