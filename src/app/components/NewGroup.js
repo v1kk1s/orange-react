@@ -1,14 +1,16 @@
 var React = require('react');
+var NewGroupContact = require('./NewGroupContact');
 var Header = require('../containers/HeaderContainer');
 require('./../../scss/components/newGroup.scss');
 
 var NewGroup = React.createClass({
 
   propTypes: {
-
+    contacts: React.PropTypes.array.isRequired,
   },
 
   render: function() {
+    let {contacts} = this.props;
     return(
       <div>
         <Header title='Create group' />
@@ -32,7 +34,11 @@ var NewGroup = React.createClass({
               </div>
 
               <div className='new-group-contacts-list'>
-
+                {contacts.map((contact, i) => {
+                  return(
+                    <NewGroupContact contact={contact} key={i}/>
+                  );
+                })}
               </div>
 
             </form>

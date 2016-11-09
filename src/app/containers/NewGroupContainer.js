@@ -7,7 +7,7 @@ var NewGroupContainer = React.createClass({
 
   render: function() {
     return(
-      <NewGroupView />
+      <NewGroupView contacts={contacts}/>
     );
   }
 });
