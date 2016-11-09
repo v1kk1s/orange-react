@@ -38,7 +38,7 @@ var ContactItemContainer = React.createClass({
   },
 
   goToConversation: function() {
-    this.context.router.push('/conversation', this.props.item.id);
+    this.context.router.push('/conversation/' + this.props.item.id);
   },
 
   render: function() {

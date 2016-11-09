@@ -15,7 +15,7 @@ var routes = (
     <Route path='/' component={Layout}>
       <IndexRoute component={Login} /> //make login active if other routes are not specified
       <Route path='/recent' component={Recent} />
-      <Route path='/conversation' component={Conversation} />
+      <Route path='/conversation/:userId' component={Conversation} />
     </Route>
   </Router>
 );
