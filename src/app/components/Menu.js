@@ -16,22 +16,22 @@ var Menu = React.createClass({
     return(
       <div className={`menu ${isMenuOpen ? 'menu-open' : ''}`}>
 
-        <div className="menu-avatar-wrap">
-          <div className="menu-user-info">
-            <div className="menu-avatar"></div>
-            <p className="menu-name">Kate Mitty</p>
+        <div className='menu-avatar-wrap'>
+          <div className='menu-user-info'>
+            <div className='menu-avatar'></div>
+            <p className='menu-name'>Kate Mitty</p>
           </div>
         </div>
 
-        <div className="menu-list-wrap">
+        <div className='menu-list-wrap'>
           <ul>
-            <Link to={'/recent'} className="menu-list-item"><span className='menu-recent'>Recent</span></Link>
-            <Link className="menu-list-item"><span className='menu-groups'>Groups</span></Link>
-            <Link className="menu-list-item"><span className='menu-contacts'>Contacts</span></Link>
-            <Link className="menu-list-item"><span className='menu-settings'>Settings</span></Link>
+            <Link to={'/recent'} className='menu-list-item'><span className='menu-recent'>Recent</span></Link>
+            <Link className='menu-list-item'><span className='menu-groups'>Groups</span></Link>
+            <Link to={'/contacts'} className='menu-list-item'><span className='menu-contacts'>Contacts</span></Link>
+            <Link className='menu-list-item'><span className='menu-settings'>Settings</span></Link>
           </ul>
 
-          <div className="menu-logout">Log out</div>
+          <div className='menu-logout'>Log out</div>
         </div>
 
       </div>

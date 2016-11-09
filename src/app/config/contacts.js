@@ -5,7 +5,8 @@ var contacts = [
     online: true,
     icon: 'chandler.png',
     group: 'friend',
-    lastSeen: "last seen 2 hours ago"
+    lastSeen: "last seen 2 hours ago",
+    seen: new Date("October 18, 2014 11:13:00")
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ var contacts = [
     online: false,
     icon: 'rachel.png',
     group: 'favourite',
-    lastSeen: "last seen 2 hours ago"
+    lastSeen: "last seen 2 hours ago",
+    seen: new Date("October 20, 2014 11:13:00")
   },
   {
     id: 3,
@@ -21,7 +23,8 @@ var contacts = [
     online: true,
     icon: 'fibi.png',
     group: 'favourite',
-    lastSeen: "last seen 2 hours ago"
+    lastSeen: "last seen 2 hours ago",
+    seen: new Date("October 15, 2014 11:13:00")
   },
   {
     id: 4,
@@ -29,7 +32,8 @@ var contacts = [
     online: true,
     icon: 'joey.png',
     lastSeen: "last seen 2 hours ago",
-    group: 'friend'
+    group: 'friend',
+    seen: new Date("October 15, 2014 11:13:00")
   },
   {
     id: 5,
@@ -37,7 +41,8 @@ var contacts = [
     online: false,
     icon: 'ross.png',
     lastSeen: "last seen 2 hours ago",
-    group: 'favourite'
+    group: 'favourite',
+    seen: new Date("October 16, 2014 11:13:00")
   },
   {
     id: 6,
@@ -45,7 +50,8 @@ var contacts = [
     online: true,
     icon: 'monica.png',
     lastSeen: "last seen 2 hours ago",
-    group: 'friend'
+    group: 'friend',
+    seen: new Date("October 17, 2014 11:13:00")
   },
   {
     id: 7,
@@ -53,7 +59,8 @@ var contacts = [
     lastSeen: "last seen 2 hours ago",
     icon: 'anabelEstanza.png',
     online: true,
-    group: 'friend'
+    group: 'friend',
+    seen: new Date("October 18, 2014 11:13:00")
   },
   {
     id: 8,
@@ -61,7 +68,8 @@ var contacts = [
     lastSeen: "last seen 8 hours ago",
     icon: 'MaryseO.png',
     online: true,
-    group: false
+    group: false,
+    seen: new Date("October 19, 2014 11:13:00")
   },
   {
     id: 9,
@@ -69,7 +77,8 @@ var contacts = [
     lastSeen: "last seen 9 hours ago",
     icon: 'TrishS.png',
     online: true,
-    group: false
+    group: false,
+    seen: new Date("October 20, 2014 11:13:00")
   },
   {
     id: 10,
@@ -77,7 +86,8 @@ var contacts = [
     lastSeen: "last seen yesterday at 16:23",
     icon: 'TrishS.png',
     online: true,
-    group: false
+    group: false,
+    seen: new Date("October 14, 2014 11:13:00")
   },
   {
     id: 11,
@@ -85,7 +95,8 @@ var contacts = [
     lastSeen: "last seen yesterday 15:24",
     icon: 'EdgeW.png',
     online: true,
-    group: false
+    group: false,
+    seen: new Date("October 16, 2014 11:13:00")
   },
   {
     id: 12,
@@ -93,7 +104,8 @@ var contacts = [
     lastSeen: "last seen yesterday at 14:12",
     icon: 'BriannaG.png',
     online: true,
-    group: false
+    group: false,
+    seen: new Date("October 14, 2014 11:13:00")
   },
   {
     id: 13,
@@ -101,7 +113,8 @@ var contacts = [
     lastSeen: "last seen yesterday at 13:40",
     icon: 'AjL.png',
     online: true,
-    group: false
+    group: false,
+    seen: new Date("October 12, 2014 11:13:00")
   }
 ];
 

@@ -1,21 +1,16 @@
 var React = require('react');
 var ContactItem = require('../containers/ContactItemContainer');
 var Header = require('../containers/HeaderContainer');
-require('./../../scss/components/recent.scss');
+var Contacts = require('../config/contacts');
+require('./../../scss/components/contacts.scss');
 
-var Recent = React.createClass({
-
-  propTypes: {
-    contacts: React.PropTypes.array.isRequired,
-  },
-
+var ContactsView = React.createClass({
   render: function() {
-    let {contacts} = this.props;
     return(
       <div>
-        <Header title='Recent' />
+        <Header title='Contacts' />
         <div className="recent list-page">
-          {contacts.map((item, i) => {
+          {Contacts.map((item, i) => {
             return(
               <ContactItem item={item} key={i}/>
             );
@@ -26,4 +21,4 @@ var Recent = React.createClass({
   }
 });
 
-module.exports = Recent;
+module.exports = ContactsView;
