@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .header {
-  @include position(absolute, 0 null null 0);
+  @include position(fixed, 0 null null 0);
   padding: 40px 30px 0;
   background: $orange;
   color: white;

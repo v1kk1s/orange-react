@@ -1,5 +1,5 @@
 var React = require('react');
-var ContactItem = require('./ContactItem');
+var ContactItem = require('../containers/ContactItemContainer');
 var Header = require('./Header');
 var Contacts = require('../config/contacts');
 require('./../../scss/components/recent.scss');
