@@ -1,20 +1,23 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
+var Menu = require('../components/Menu');
 require('./../../scss/components/header.scss');
 
 var Header = React.createClass({
 
   propTypes: {
     title: PropTypes.string.isRequired,
+    toggleMenu: PropTypes.func.isRequired,
+    isMenuOpen: PropTypes.bool.isRequired,
   },
 
   render: function() {
-    let {title} = this.props;
+    let {title, isMenuOpen, toggleMenu} = this.props;
     return(
       <header className='header'>
 
         <div className='header-top-wrap'>
-          <div className='header-menu-wrap'>
+          <div className='header-menu-wrap' onClick={toggleMenu}>
             <div className='nav-icon'> <div></div> </div>
           </div>
 
@@ -27,6 +30,8 @@ var Header = React.createClass({
           <input type='search' className='header-search-field' placeholder='Search'/>
 
         </form>
+
+        <Menu isMenuOpen={isMenuOpen}/>
       </header>
     );
   }

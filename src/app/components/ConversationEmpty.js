@@ -1,6 +1,6 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
-var Header = require('./Header');
+var Header = require('../containers/HeaderContainer');
 require('./../../scss/components/conversation.scss');
 
 var ConversationEmptyView = React.createClass({

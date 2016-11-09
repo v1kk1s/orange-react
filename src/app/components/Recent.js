@@ -1,6 +1,6 @@
 var React = require('react');
 var ContactItem = require('../containers/ContactItemContainer');
-var Header = require('./Header');
+var Header = require('../containers/HeaderContainer');
 var Contacts = require('../config/contacts');
 require('./../../scss/components/recent.scss');
 
@@ -8,7 +8,7 @@ var Recent = React.createClass({
   render: function() {
     return(
       <div>
-        <Header title='Recent'/>
+        <Header title='Recent' />
         <div className="recent list-page">
           {Contacts.map((item, i) => {
             return(
