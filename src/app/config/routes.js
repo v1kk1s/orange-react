@@ -11,6 +11,7 @@ var Recent = require('../containers/RecentContainer');
 var Contacts = require('../components/Contacts');
 var Conversation = require('../containers/ConversationContainer');
 var Groups = require('../containers/GroupsContainer');
+var NewGroup = require('../containers/NewGroupContainer');
 
 var routes = (
   <Router history={hashHistory}>
@@ -19,6 +20,7 @@ var routes = (
       <Route path='/recent' component={Recent} />
       <Route path='/contacts' component={Contacts} />
       <Route path='/groups' component={Groups} />
+      <Route path='/new-group' component={NewGroup} />
       <Route path='/conversation/:userId' component={Conversation} />
     </Route>
   </Router>

@@ -1,5 +1,7 @@
 var React = require('react');
 var GroupItem = require('./GroupsItem');
+var Router = require('react-router');
+var Link = Router.Link;
 var Header = require('../containers/HeaderContainer');
 require('./../../scss/components/groups.scss');
 
@@ -22,7 +24,7 @@ var Groups = React.createClass({
             );
           })}
 
-          <div className='groups-add-new'>Add new group</div>
+          <Link to={'/new-group'} className='groups-add-new'>Add new group</Link>
 
         </div>
       </div>
